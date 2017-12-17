@@ -20,18 +20,20 @@
 	$userID = $_SESSION['userID'];
 ?>
 <div class="header">
-	<h3>Welcome <?php echo $_SESSION["userFname"]; ?></h3>
+	<h1>Hello!<?php echo $_SESSION["userFname"]; ?></h1><br>
 </div>
 <div>
-	<div style="width: 100%;float: right;">
-		<div style="float: right;width: 35%;"><h6><a href="index.php?page=accounts&action=logout">Logout</a></h6></div>
-		<div style="float: right;width: 35%;"><h6><a href="index.php?page=accounts&action=edit&id=<?php echo $userID; ?>">Edit Profile</a></h6></div>
-		<div style="float: right;width: 30%;"><h6><a href="index.php?page=accounts&action=show&id=<?php echo $userID; ?>">View Profile</a></h6></div>
-	</div>
+	<div style="width: 100%;float: center;">
+		
+		<div style="float: center;width: 100%;"><h2><a href="index.php?page=accounts&action=edit&id=<?php echo $userID; ?>">Edit Profile</a></h2></div><br>
+		<div style="float: center;width: 100%;"><h2><a href="index.php?page=accounts&action=show&id=<?php echo $userID; ?>">View Profile</a></h2></div><br>
+   <div style="width: 100%;">
+	<h2><a href="index.php?page=tasks&action=create">Create Task</a></h2><br>
+	<div style="float: center;width: 100%;"><h2><a href="index.php?page=accounts&action=logout">Logout</a></h2></div>
+  </div>
 </div>
 
-<div style="width: 100%;">
-	<h6><a href="index.php?page=tasks&action=create">Create Task</a></h6>
+
 </div>
 
 
