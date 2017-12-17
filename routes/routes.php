@@ -135,7 +135,7 @@ class routes
         
         $route = new route();
         $route->http_method = 'POST';
-        $route->action = 'save';
+        $route->action = 'edit';
         $route->page = 'accounts';
         $route->controller = 'accountsController';
         $route->method = 'save';
