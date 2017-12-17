@@ -29,7 +29,8 @@ final class account extends \database\model
         return $password;
     }
     public function checkPassword($LoginPassword) {
-        return password_verify($LoginPassword, $this->password);
+        $pwd = password_hash($LoginPassword, PASSWORD_BCRYPT);
+        return password_verify($LoginPassword, $pwd);
     }
     public function validate()
     {
