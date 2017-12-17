@@ -16,6 +16,25 @@
 </head>
 
 <body>
+<?php 
+	$userID = $_SESSION['userID'];
+?>
+<div class="header">
+	<h3>Welcome <?php echo $_SESSION["userFname"]; ?></h3>
+</div>
+<div>
+	<div style="width: 100%;float: right;">
+		<div style="float: right;width: 35%;"><h6><a href="index.php?page=accounts&action=logout">Logout</a></h6></div>
+		<div style="float: right;width: 35%;"><h6><a href="index.php?page=accounts&action=edit&id=<?php echo $userID; ?>">Edit Profile</a></h6></div>
+		<div style="float: right;width: 30%;"><h6><a href="index.php?page=accounts&action=show&id=<?php echo $userID; ?>">View Profile</a></h6></div>
+	</div>
+</div>
+
+<div style="width: 100%;">
+	<h6><a href="index.php?page=tasks&action=create">Create Task</a></h6>
+</div>
+
+
 
 <?php
 //this is how you print something
