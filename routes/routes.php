@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kwilliams
- * Date: 11/27/17
- * Time: 5:25 PM
- */
 class routes
 {
     public static function getRoutes()
@@ -127,7 +121,45 @@ class routes
         $route->method = 'store';
         $routes[] = $route;
         return $routes;
-    }
+        
+        //Task creation
+        $route = new route();
+        $route->http_method = 'GET';
+        $route->action = 'create';
+        $route->page = 'tasks';
+        $route->controller = 'tasksController';
+        $route->method = 'create';
+        $routes[] = $route;
+        
+        //creating task
+        $route = new route();
+        $route->http_method = 'POST';
+        $route->action = 'create';
+        $route->page = 'tasks';
+        $route->controller = 'tasksController';
+        $route->method = 'store';
+        $routes[] = $route;
+        
+        //editing task
+        $route = new route();
+        $route->http_method = 'GET';
+        $route->action = 'edit';
+        $route->page = 'tasks';
+        $route->controller = 'tasksController';
+        $route->method = 'edit';
+        $routes[] = $route;
+        
+        //edit task
+        $route = new route();
+        $route->http_method = 'POST';
+        $route->action = 'edit';
+        $route->page = 'tasks';
+        $route->controller = 'tasksController';
+        $route->method = 'store';
+        $routes[] = $route;
+        
+        return $routes;
+     }
     public static function create($http_method,$action,$page,$controller,$method) {
         $route = new route();
         $route->http_method = $http_method;
